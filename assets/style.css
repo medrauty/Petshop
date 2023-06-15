@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background: #111111;
+    background-color:#fefefe;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 80px;
+    background: #fefefe;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 15px 100px;
+}
+
+.logo{
+    font-size: 25px;
+    font-weight: 7px;
+    color:#111111;
+}
+
+.menu_lines{
+    display: none;
+}
+
+.nav-bar ul{
+    display: flex;
+}
+
+.nav-bar ul li a{
+    display: block;
+    color: #111111;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 0 5px;
+}
+
+.nav-bar ul li a:hover{
+    color: #fefefe;
+    background: #111111;
+}
+
+.nav-bar ul li a.active{
+    color:#fefefe;
+    background: #111111;
+}
+
+.informacoes, .banho{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.informacoes_img{
+    width: 55%;
+}
+
+.banho_img{
+    width: 50%;
+}
+
+.informacoes_text, .banho_text{
+    background: #fefefe;
+    color: #111111;
+    padding: 5px 12px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.footer{
+    margin: 0;
+    padding: 25px 0;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#fefefe;
+}
+
+.footer_logo{
+    font-size: 35px;
+    font-weight: 400;
+    color: #111111;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.instagram, .facebook, .whatsapp{
+    color: #111111;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    background: none;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:1320px){
+    header{
+        padding: 15 50px;
+    }
+}
+
+@media only screen and (max-width:1100px){
+    header{
+        padding: 15px 30px;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .menu_lines{
+        display: block;
+        cursor: pointer;
+    }
+    .bx-menu{
+        font-size: 2.5rem;
+    }
+    .nav-bar{
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #fefefe;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .nav-bar.active{
+        height: 450px;
+    }
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+        color: #111111;
+    }
+
+    .informacoes{
+        flex-direction: column;
+        order: 2;
+    }
+
+    .banho{
+        padding: 10px 0;
+        flex-direction: column;
+        order: 4;
+    }
+
+    .informacoes_img{
+        width: 100%;
+        order: 1;
+    }
+    
+    .banho_img{
+        width: 100%;
+        order: 3;
+    }
+    
+    .informacoes_text, .banho_text{
+        background: #fefefe;
+        color: #111111;
+        padding: 5px 12px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
